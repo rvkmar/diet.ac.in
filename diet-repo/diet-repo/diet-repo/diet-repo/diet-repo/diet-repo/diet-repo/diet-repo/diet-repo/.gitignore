@@ -1,0 +1,35 @@
+# Created by https://www.gitignore.io/api/visualstudiocode
+# Edit at https://www.gitignore.io/?templates=visualstudiocode
+
+### VisualStudioCode ###
+.vscode/*
+ztest/*
+push_both.bat
+# Maybe .vscode/**/* instead - see comments
+# !.vscode/settings.json
+.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+**/.history
+
+### OS / editor cruft ###
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+### Node / tooling (Decap CMS local dev, if ever used) ###
+node_modules/
+npm-debug.log*
+.env
+.env.local
+
+### Netlify ###
+.netlify/
+
+# End of https://www.gitignore.io/api/visualstudiocode
