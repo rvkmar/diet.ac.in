@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="./resources/ol.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+    <link rel="stylesheet" href="./resources/qgis2web.css">
+    <style>
+        html,
+        body {
+            background-color: #ffffff;
+        }
+
+        .ol-control>* {
+            background-color: #f8f8f8 !important;
+            color: #444444 !important;
+            border-radius: 0px;
+        }
+
+        .ol-attribution a,
+        .gcd-gl-input::placeholder,
+        .search-layer-input-search::placeholder {
+            color: #444444 !important;
+        }
+
+        .search-layer-input-search {
+            background-color: #f8f8f8 !important;
+        }
+
+        .ol-control>*:focus,
+        .ol-control>*:hover {
+            background-color: rgba(248, 248, 248, 0.7) !important;
+        }
+
+        .ol-control {
+            background-color: rgba(255, 255, 255, .4) !important;
+            padding: 2px !important;
+        }
+    </style>
+
+    <style>
+        html,
+        body,
+        #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+
+    <!-- for map legend and north arrow -->
+    <style>
+        #legend-container {
+            position: absolute;
+            bottom: 80px;
+            right: 10px;
+            z-index: 1000;
+            text-align: right;
+        }
+
+        #legend {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            position: relative;
+            display: block;
+            /* visible initially */
+            opacity: 1;
+            /* fully visible initially */
+            transition: opacity 0.5s ease;
+            /* Smooth fade */
+        }
+
+        #legend.fade-out {
+            opacity: 0;
+            /* fade out to transparent */
+            pointer-events: none;
+            /* prevent clicking while hidden */
+        }
+
+        #legend img {
+            width: 150px;
+        }
+
+        #close-legend {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            color: #9b8b8b;
+        }
+
+        #show-legend {
+            background-color: #fff;
+            border: 1px solid #666;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        #compass {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+
+        #compass-img {
+            width: 50px;
+            transition: transform 0.5s ease;
+        }
+    </style>
+    <!-- map header css -->
+    <style>
+        #map-header {
+            position: absolute;
+            top: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 18px;
+            z-index: 1000;
+            text-align: center;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <!-- For scale -->
+    <style>
+        .ol-scale-line {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Background box color */
+            border: 1px solid #666;
+            /* Border around the scale box */
+            /* padding: 2px 6px; */
+            /* font-size: 14px; */
+            /* Size of the text */
+            /* font-family: Arial, sans-serif; */
+            /* color: #000; */
+            /* Text color */
+            /* bottom: 60px; */
+            /* Move up to avoid other controls */
+            /* left: 10px; */
+        }
+
+        .ol-scale-line-inner {
+            border-top: 3px solid #007BFF;
+            /* Line thickness and color */
+            color: #007BFF;
+            /* Text color */
+            font-weight: bold;
+            font-size: 1rem;
+        }
+    </style>
+
+    <title>Schools in Chennai District, Tamil Nadu</title>
+</head>
+
+<body>
+    <div id="map">
+        <div id="popup" class="ol-popup">
+            <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+            <div id="popup-content"></div>
+        </div>
+    </div>
+    <!-- DIET location in Chennai District, Tamil Nadu -->
+    <!-- HTML element for the icon + label -->
+    <div id="diet-icon" style="color: darkblue; font-size: 24px; text-align: center;">
+        <a href="https://www.google.com/maps?q=13.047668788212622, 80.27917846836266" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: darkblue;">
+        <i class="fa fa-map-marker"></i><br style="line-height: 0.1;">
+        <span style="font-size: 1rem; font-weight:bold;">DIET Chennai</span>
+        </a>
+    </div>
+
+    <!-- map legend and north arrow -->
+    <div id="legend-container">
+        <button id="show-legend" style="display: none;">Show Legend</button>
+        <div id="legend">
+            <button id="close-legend">&times;</button>
+            <img src="/assets/content/statistics/images/legend.png" alt="Map Legend" style="width:150px;">
+        </div>
+    </div>
+    <!-- North arrow and compass -->
+    <div id="compass">
+        <img id="compass-img" src="/assets/content/statistics/images/north-arrow.png" alt="Compass" style="width:50px;">
+    </div>
+
+    <!-- map header -->
+    <div id="map-header">
+        Schools in Chennai
+    </div>
+
+
+    <script src="resources/qgis2web_expressions.js" defer></script>
+    <script src="./resources/functions.js" defer></script>
+    <script src="./resources/ol.js" defer></script>
+    <script src="./resources/ol-layerswitcher.js" defer></script>
+    <script src="layers/Districts_1.js" defer></script>
+    <script src="layers/chennaiassemblyconstituencyboundaries_2.js" defer></script>
+    <script src="layers/chennaiparliamentaryconstituencies_3.js" defer></script>
+    <script src="layers/GCC_DIVISION_4.js" defer></script>
+    <script src="layers/GCC_ZONE_5.js" defer></script>
+    <script src="layers/TNschoolsGIS_6.js" defer></script>
+    <script src="styles/Districts_1_style.js" defer></script>
+    <script src="styles/chennaiassemblyconstituencyboundaries_2_style.js" defer></script>
+    <script src="styles/chennaiparliamentaryconstituencies_3_style.js" defer></script>
+    <script src="styles/GCC_DIVISION_4_style.js" defer></script>
+    <script src="styles/GCC_ZONE_5_style.js" defer></script>
+    <script src="styles/TNschoolsGIS_6_style.js" defer></script>
+    <script src="./layers/layers.js" type="text/javascript" defer></script>
+    <script src="./resources/Autolinker.min.js" defer></script>
+    <script src="./resources/qgis2web.js" defer></script>
+    <!-- for clickable legend -->
+    <script defer>
+        const legend = document.getElementById('legend');
+        const showLegendButton = document.getElementById('show-legend');
+        const closeLegendButton = document.getElementById('close-legend');
+
+        closeLegendButton.addEventListener('click', function () {
+            // Start fading out
+            legend.classList.add('fade-out');
+
+            // After fade animation (0.5s), hide legend and show button
+            setTimeout(function () {
+                legend.style.display = "none";
+                showLegendButton.style.display = "inline-block";
+            }, 500); // matches the CSS transition time
+        });
+
+        showLegendButton.addEventListener('click', function () {
+            // Show the legend first
+            legend.style.display = "block";
+
+            // Allow a tiny time gap before removing fade-out (to trigger CSS transition)
+            setTimeout(function () {
+                legend.classList.remove('fade-out');
+            }, 10);
+
+            showLegendButton.style.display = "none";
+        });
+
+        map.getView().on('change:rotation', function () {
+            var rotation = map.getView().getRotation();
+            var compass = document.getElementById('compass-img');
+            compass.style.transform = 'rotate(' + (-rotation) + 'rad)';
+        });
+    </script>
+
+</body>
+
+</html>
