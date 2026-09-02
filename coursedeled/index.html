@@ -107,6 +107,8 @@
             transition: background-color 0.3s ease, transform 0.2s ease;
             z-index: 10000;
             line-height: 1;
+            border: none;
+            font-family: inherit;
         }
 
         .close:hover {
@@ -115,7 +117,7 @@
         }
 
         .apply-btn {
-            background-color: #007bff;
+            background-color: #0056b3;
             color: white;
             padding: 12px 24px;
             border: none;
@@ -126,7 +128,7 @@
         }
 
         .apply-btn:hover {
-            background-color: #0056b3;
+            background-color: #003d80;
         }
 
         .button-overlay {
@@ -279,7 +281,7 @@
                                 <li class="list-inline-item">
                                     <div class="language-switch">
                                         <label class="switch">
-                                            <input type="checkbox" id="langToggle">
+                                            <input type="checkbox" id="langToggle" aria-label="Switch site language between English and Tamil">
                                             <span class="slider"></span>
                                             <!-- <label for="langToggle" class="slider"></label> -->
                                         </label>
@@ -326,7 +328,7 @@
 
         <section class="wrapper megamenu-wraper">
             <div class="container common-container four_content">
-                <p class="showhide"><em></em><em></em><em></em></p>
+                <p class="showhide" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main_menu"><em></em><em></em><em></em></p>
                 <nav class="main-menu clearfix" id="main_menu" style="">
                     <ul class="nav-menu">
                         <li class="nav-item"> <a href="/" class=""><i class="fa fa-home" aria-hidden="true"></i>
@@ -519,9 +521,9 @@
             </div>
             <section id="page-head" class="wrapper headings-wrapper">
                 <div class="container common-container four_content">
-                    <h2><i class="fa fa-info-circle" aria-hidden="true">&nbsp;</i><samp
+                    <h1><i class="fa fa-info-circle" aria-hidden="true">&nbsp;</i><samp
                             data-i18n="coursedeled">D.El.Ed.,</samp>
-                    </h2>
+                    </h1>
                     <hr />
                 </div>
             </section>
@@ -539,15 +541,15 @@
                         <button class="apply-btn" onclick="openModal('instructions')">View Instructions</button>
                         <button class="apply-btn" onclick="openModal('apply')">Apply Now</button>
                     </div>
-                    <p style="color: orangered; text-align: center; font-weight:600;">Online admission window is closed. Please visit our DIET directly for spot admission.</p>
+                    <p style="color: #db3b00; text-align: center; font-weight:600;">Online admission window is closed. Please visit our DIET directly for spot admission.</p>
                 </div>
             </div>
             <p style="text-align: center; margin: 1%; font-style: italic;">For more info, please visit the <a
-                    href="https://scert.tnschools.gov.in" style="color: #007bff; font-weight: 600;">Official SCERT Tamil
+                    href="https://scert.tnschools.gov.in" style="color: #0056b3; font-weight: 600;">Official SCERT Tamil
                     Nadu website</a> </p>
             <!-- Apply Modal -->
             <div id="applyModal" class="modal" onclick="ignoreOutsideClick(event, 'apply')">
-                <span class="close" onclick="showConfirmModal()">&times;</span>
+                <button type="button" class="close" onclick="showConfirmModal()" aria-label="Close">&times;</button>
                 <div class="modal-content">
                     <!-- <iframe src="https://scert.tnschools.gov.in/admission/diploma_elementary_education" -->
                     <iframe src="https://scert.tnschools.gov.in/admission/instructions"
@@ -557,7 +559,7 @@
 
             <!-- Instructions Modal -->
             <div id="instructionsModal" class="modal">
-                <span class="close" onclick="closeModal('instructions')">&times;</span>
+                <button type="button" class="close" onclick="closeModal('instructions')" aria-label="Close">&times;</button>
                 <div class="modal-content">
                     <iframe
                         src="https://d1wpyxz35bzzz4.cloudfront.net/2025_2026_D.El.Ed_Admission_Guidelines_for_Government_Institutions.pdf"
