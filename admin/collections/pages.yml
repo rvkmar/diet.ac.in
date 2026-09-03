@@ -13,28 +13,6 @@
             allow_language_selection: false
             output_code_only: true
             hint: "This edits this page's content and metadata (title, description, last-updated date). The shared navigation, header, and footer are no longer part of this file (Phase 2 migration) — they live once in src/_includes/ and apply to every page automatically. For announcements, circulars, downloads, banners, and the last-updated date, use the dedicated sections above instead."
-      - name: "about-diet-chennai"
-        label: "About Diet Chennai (raw HTML)"
-        file: "src/about-diet-chennai/index.njk"
-        fields:
-          - label: "Full page HTML source"
-            name: "body"
-            widget: "code"
-            default_language: "html"
-            allow_language_selection: false
-            output_code_only: true
-            hint: "This edits this page's content and metadata (title, description, last-updated date). The shared navigation, header, and footer are no longer part of this file (Phase 2 migration) — they live once in src/_includes/ and apply to every page automatically. For announcements, circulars, downloads, banners, and the last-updated date, use the dedicated sections above instead."
-      - name: "about-diet"
-        label: "About Diet (raw HTML)"
-        file: "src/about-diet/index.njk"
-        fields:
-          - label: "Full page HTML source"
-            name: "body"
-            widget: "code"
-            default_language: "html"
-            allow_language_selection: false
-            output_code_only: true
-            hint: "This edits this page's content and metadata (title, description, last-updated date). The shared navigation, header, and footer are no longer part of this file (Phase 2 migration) — they live once in src/_includes/ and apply to every page automatically. For announcements, circulars, downloads, banners, and the last-updated date, use the dedicated sections above instead."
       - name: "academic-faculty"
         label: "Academic Faculty (raw HTML)"
         file: "src/academic-faculty/index.njk"
@@ -115,28 +93,6 @@
       - name: "circulars"
         label: "Circulars (raw HTML)"
         file: "src/circulars/index.njk"
-        fields:
-          - label: "Full page HTML source"
-            name: "body"
-            widget: "code"
-            default_language: "html"
-            allow_language_selection: false
-            output_code_only: true
-            hint: "This edits this page's content and metadata (title, description, last-updated date). The shared navigation, header, and footer are no longer part of this file (Phase 2 migration) — they live once in src/_includes/ and apply to every page automatically. For announcements, circulars, downloads, banners, and the last-updated date, use the dedicated sections above instead."
-      - name: "contact-us"
-        label: "Contact Us (raw HTML)"
-        file: "src/contact-us/index.njk"
-        fields:
-          - label: "Full page HTML source"
-            name: "body"
-            widget: "code"
-            default_language: "html"
-            allow_language_selection: false
-            output_code_only: true
-            hint: "This edits this page's content and metadata (title, description, last-updated date). The shared navigation, header, and footer are no longer part of this file (Phase 2 migration) — they live once in src/_includes/ and apply to every page automatically. For announcements, circulars, downloads, banners, and the last-updated date, use the dedicated sections above instead."
-      - name: "coursedeled"
-        label: "Coursedeled (raw HTML)"
-        file: "src/coursedeled/index.njk"
         fields:
           - label: "Full page HTML source"
             name: "body"
@@ -255,42 +211,9 @@
             allow_language_selection: false
             output_code_only: true
             hint: "This edits this page's content and metadata (title, description, last-updated date). The shared navigation, header, and footer are no longer part of this file (Phase 2 migration) — they live once in src/_includes/ and apply to every page automatically. For announcements, circulars, downloads, banners, and the last-updated date, use the dedicated sections above instead."
-      - name: "org-structure"
-        label: "Org Structure (raw HTML)"
-        file: "src/org-structure/index.njk"
-        fields:
-          - label: "Full page HTML source"
-            name: "body"
-            widget: "code"
-            default_language: "html"
-            allow_language_selection: false
-            output_code_only: true
-            hint: "This edits this page's content and metadata (title, description, last-updated date). The shared navigation, header, and footer are no longer part of this file (Phase 2 migration) — they live once in src/_includes/ and apply to every page automatically. For announcements, circulars, downloads, banners, and the last-updated date, use the dedicated sections above instead."
-      - name: "principals-desk"
-        label: "Principals Desk (raw HTML)"
-        file: "src/principals-desk/index.njk"
-        fields:
-          - label: "Full page HTML source"
-            name: "body"
-            widget: "code"
-            default_language: "html"
-            allow_language_selection: false
-            output_code_only: true
-            hint: "This edits this page's content and metadata (title, description, last-updated date). The shared navigation, header, and footer are no longer part of this file (Phase 2 migration) — they live once in src/_includes/ and apply to every page automatically. For announcements, circulars, downloads, banners, and the last-updated date, use the dedicated sections above instead."
       - name: "roles-functions"
         label: "Roles Functions (raw HTML)"
         file: "src/roles-functions/index.njk"
-        fields:
-          - label: "Full page HTML source"
-            name: "body"
-            widget: "code"
-            default_language: "html"
-            allow_language_selection: false
-            output_code_only: true
-            hint: "This edits this page's content and metadata (title, description, last-updated date). The shared navigation, header, and footer are no longer part of this file (Phase 2 migration) — they live once in src/_includes/ and apply to every page automatically. For announcements, circulars, downloads, banners, and the last-updated date, use the dedicated sections above instead."
-      - name: "rti-diet-rules"
-        label: "Rti Diet Rules (raw HTML)"
-        file: "src/rti-diet-rules/index.njk"
         fields:
           - label: "Full page HTML source"
             name: "body"

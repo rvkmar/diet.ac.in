@@ -51,102 +51,6 @@
         <link href="/css/no-js.min.css" type="text/css" rel="stylesheet">
     </noscript>
 
-<style>
-        /* Centered button container */
-        .img-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            align-items: center;
-        }
-  
-        /* Centered button container */
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            align-items: center;
-        }
-  
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.6);
-        }
-  
-        .modal-content {
-            background-color: #fff;
-            margin: 4% auto;
-            padding: 0;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 80vw;
-            height: 90vh;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-  
-        .close {
-            position: absolute;
-            top: 12px;
-            right: 16px;
-            font-size: 28px;
-            font-weight: bold;
-            color: #ffffff;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 4px 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            z-index: 10000;
-            line-height: 1;
-            border: none;
-            font-family: inherit;
-        }
-  
-        .close:hover {
-            background-color: rgba(255, 0, 0, 0.8);
-            transform: scale(1.1);
-        }
-  
-        .apply-btn {
-            background-color: #ff9d00;
-            color: #1a1a1a;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-            margin: 10px;
-        }
-  
-        .apply-btn:hover {
-            background-color: #0056b3;
-        }
-  
-        .button-overlay {
-            position: absolute;
-            top: 2.3rem;
-            left: 70%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 12px;
-            z-index: 10;
-        }
-  
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
 
 </head>
 
@@ -484,6 +388,72 @@
 
 
 
+
+<style>
+    .button-overlay {
+        position: absolute;
+        top: 2.3rem;
+        left: 70%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 12px;
+        z-index: 10;
+    }
+    .apply-btn {
+        background-color: #ff9d00;
+        color: #1a1a1a;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 10px;
+    }
+    .apply-btn:hover { background-color: #0056b3; }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .modal-content {
+        background-color: #fff;
+        margin: 4% auto;
+        padding: 0;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 80vw;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .modal-content iframe { width: 100%; height: 100%; border: none; }
+    .close {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 4px 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        z-index: 10000;
+        line-height: 1;
+        border: none;
+        font-family: inherit;
+    }
+    .close:hover { background-color: rgba(255, 0, 0, 0.8); transform: scale(1.1); }
+</style>
+<script src="/js/modals.min.js" defer></script>
     <!--/.nav-wrapper-->
     <!-- Main and modifiable content starts here -->
     <!-- ---------------------------------------------- -->
@@ -502,7 +472,9 @@
                     <div class="container common-container four_content">
                         <ul>
                             <li><a href="/" data-i18n="home">Home </a></li>
+                            
                             <li><a href="#" data-i18n="aboutus">About Us</a></li>
+                            
                             <li><a href="/about-diet-chennai/" data-i18n="introduction">About DIET Chennai</a></li>
                         </ul>
                     </div>
@@ -510,8 +482,7 @@
             </div>
             <section id="page-head" class="wrapper headings-wrapper">
                 <div class="container common-container four_content">
-                    <h1><i class="fa fa-info-circle" aria-hidden="true">&nbsp;</i><samp data-i18n="introduction">About
-                            DIET Chennai</samp></h1>
+                    <h1><i class="fa fa-info-circle" aria-hidden="true">&nbsp;</i><samp data-i18n="introduction">About DIET Chennai</samp></h1>
                     <hr />
                 </div>
             </section>
@@ -532,15 +503,18 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                 <div class="custompara englishparagraph">
+                                    
                                     <h2>Roots and evolution of DIET, Chennai</h2>
-                                    <p>DIET, Chennai is a premier Teacher Education Institution (TEI) situated in the
+                                                                        <p>DIET, Chennai is a premier Teacher Education Institution (TEI) situated in the
                                         Lady
                                         Willingdon Educational Campus,
                                         Kamarajar Salai (opposite to Marina
                                         Beach), Triplicane, Chennai, Tamil Nadu. It functions under the State Council of
                                         Educational Research and Training (SCERT), Tamil Nadu.</p>
+                                    
+                                    
                                     <h2>1. Origins (1912)</h2>
-                                    <p>
+                                                                        <p>
                                         The roots of the <i>Lady Willingdon Training School</i> trace back to
                                         <i>1912</i>,
                                         with the establishment of a
@@ -563,8 +537,10 @@
                                         (Felton, 1950).
                                     </p>
 
+                                    
+                                    
                                     <h2>2. Relocation to the <i>Ice House</i> (1914)</h2>
-                                    <p>
+                                                                        <p>
                                         By <i>1914</i>, the institution had moved to the <i>Ice House</i>, now known as
                                         <i>Vivekanandar Illam</i>, located
                                         on Marina Beach. This move was made initially on a <i>rental basis</i>, offering
@@ -581,8 +557,10 @@
                                             Institute</i>.
                                     </p>
 
+                                    
+                                    
                                     <h2>3. Renaming as Lady Willingdon Training School (1922)</h2>
-                                    <p>
+                                                                        <p>
                                         On <i>December 19, 1922</i>, a new purpose-built block was completed, and the
                                         institution was
                                         officially named <i>Lady Willingdon
@@ -603,8 +581,10 @@
                                         academic wings.
                                     </p>
 
+                                    
+                                    
                                     <h2>4. Courses in Elementary Teacher Training</h2>
-                                    <p>
+                                                                        <p>
                                         Over the decades, the institute offered several programs aimed at producing
                                         skilled elementary teachers, such as:
                                     </p>
@@ -620,8 +600,10 @@
                                         methods aligned with state curriculum frameworks.
                                     </p>
 
+                                    
+                                    
                                     <h2>5. Upgradation to DIET and IASE – 1990</h2>
-                                    <p>
+                                                                        <p>
                                         Following the recommendations of the <i>National Policy on Education, 1986</i>,
                                         and
                                         the resulting teacher education
@@ -647,8 +629,10 @@
                                         Policy on Education, 1986).
                                     </p>
 
+                                    
+                                    
                                     <h2>6. Institutional Split and Establishment of Training College</h2>
-                                    <p>
+                                                                        <p>
                                         In the 1990s, the training institution was bifurcated into two separate
                                         entities:
                                     </p>
@@ -667,8 +651,10 @@
                                         evolving educational standards.
                                     </p>
 
+                                    
+                                    
                                     <h2>7. Legacy and Contemporary Role</h2>
-                                    <p>
+                                                                        <p>
                                         Today, more than a century since its founding, the legacy of the Lady Willingdon
                                         institutions remains significant in
                                         Tamil Nadu's teacher education landscape:
@@ -694,16 +680,21 @@
                                     </p>
 
 
+                                
+                                    
                                 </div>
                                 <div class="custompara tamilparagraph tamilmarutham">
+                                    
                                     <h2>டயட், சென்னையின் தோற்றமும் வளர்ச்சியும்</h2>
-                                    <p>டயட், சென்னை என்பது தமிழ்நாடு, சென்னை, திருவல்லிக்கேணியில், மெரினா
+                                                                        <p>டயட், சென்னை என்பது தமிழ்நாடு, சென்னை, திருவல்லிக்கேணியில், மெரினா
                                         கடற்கரைக்கு எதிரே உள்ள காமராஜர் சாலையில் அமைந்துள்ள லேடி வில்லிங்டன்
                                         கல்வி வளாகத்தில் செயல்படும் ஒரு முதன்மையான ஆசிரியர் கல்வி நிறுவனம்
                                         (TEI) ஆகும். இது தமிழ்நாடு மாநில கல்வி ஆராய்ச்சி மற்றும் பயிற்சிக்
                                         கழகத்தின் (SCERT) கீழ் இயங்குகிறது.</p>
+                                    
+                                    
                                     <h2>1. தோற்றம் (1912)</h2>
-                                    <p>
+                                                                        <p>
                                         <i>லேடி வில்லிங்டன் பயிற்சிப் பள்ளி</i>யின் தோற்றம் <i>1912</i>
                                         ஆம் ஆண்டுக்குச் செல்கிறது. அப்போது சென்னை <i>திருவல்லிக்கேணி டி.பி.
                                             கோயில் தெரு</i>வில் இளம் விதவைக் குழந்தைகளுக்கான பள்ளியும்
@@ -722,8 +713,10 @@
                                         பிரதிநிதித்துவப்படுத்தினர் (Felton, 1950).
                                     </p>
 
+                                    
+                                    
                                     <h2>2. <i>ஐஸ் ஹவுஸு</i>க்கு இடமாற்றம் (1914)</h2>
-                                    <p>
+                                                                        <p>
                                         <i>1914</i>ஆம் ஆண்டில், நிறுவனம் மெரினா கடற்கரையில் அமைந்துள்ள,
                                         தற்போது <i>விவேகானந்தர் இல்லம்</i> என அழைக்கப்படும் <i>ஐஸ்
                                             ஹவுஸு</i>க்கு மாற்றப்பட்டது. வளர்ந்து வரும் நிறுவனத்திற்கு
@@ -736,8 +729,10 @@
                                         அழைக்கப்பட்டது.
                                     </p>
 
+                                    
+                                    
                                     <h2>3. <i>லேடி வில்லிங்டன் பயிற்சிப் பள்ளி</i> என பெயர் மாற்றம் (1922)</h2>
-                                    <p>
+                                                                        <p>
                                         <i>1922 டிசம்பர் 19</i> அன்று, புதிதாகக் கட்டப்பட்ட கட்டிடத் தொகுதி
                                         நிறைவடைந்தது, மேலும் அப்போதைய மதராஸ் ஆளுநரின் மனைவியான <i>லேடி
                                             வில்லிங்டனி</i>ன் நினைவாக நிறுவனம் அதிகாரப்பூர்வமாக <i>லேடி
@@ -753,8 +748,10 @@
                                         கல்விப் பிரிவுகளைப் பிரிப்பதற்கும் வழிவகுத்தது.
                                     </p>
 
+                                    
+                                    
                                     <h2>4. தொடக்கநிலை ஆசிரியர் பயிற்சி படிப்புகள்</h2>
-                                    <p>
+                                                                        <p>
                                         பல தசாப்தங்களாக, திறமையான தொடக்கநிலை ஆசிரியர்களை உருவாக்கும் நோக்கில்
                                         நிறுவனம் பின்வரும் பல படிப்புகளை வழங்கியது:
                                     </p>
@@ -770,8 +767,10 @@
                                         ஆகியவற்றுக்கு முக்கியத்துவம் அளித்தன.
                                     </p>
 
+                                    
+                                    
                                     <h2>5. டயட் மற்றும் ஐஏஎஸ்இ ஆக மேம்படுத்தப்பட்டது – 1990</h2>
-                                    <p>
+                                                                        <p>
                                         <i>தேசிய கல்விக் கொள்கை, 1986</i> இன் பரிந்துரைகளையும் அதனால் ஏற்பட்ட
                                         ஆசிரியர் கல்விச் சீர்திருத்தங்களையும் தொடர்ந்து, <i>1990</i>ஆம்
                                         ஆண்டில் நிறுவனங்கள் மேலும் மேம்படுத்தப்பட்டன:
@@ -792,8 +791,10 @@
                                         (தேசிய கல்விக் கொள்கை, 1986).
                                     </p>
 
+                                    
+                                    
                                     <h2>6. நிறுவனப் பிரிவினையும் பயிற்சிக் கல்லூரி நிறுவப்பட்டதும்</h2>
-                                    <p>
+                                                                        <p>
                                         1990களில், பயிற்சி நிறுவனம் இரண்டு தனித்தனி அமைப்புகளாகப்
                                         பிரிக்கப்பட்டது:
                                     </p>
@@ -809,8 +810,10 @@
                                         செய்யவும் உதவியது.
                                     </p>
 
+                                    
+                                    
                                     <h2>7. பாரம்பரியமும் இன்றைய பங்களிப்பும்</h2>
-                                    <p>
+                                                                        <p>
                                         இன்று, நிறுவப்பட்டு நூற்றாண்டுக்கும் மேலாகியும், லேடி வில்லிங்டன்
                                         நிறுவனங்களின் பாரம்பரியம் தமிழ்நாட்டின் ஆசிரியர் கல்வித் துறையில்
                                         முக்கியத்துவம் வாய்ந்ததாகவே உள்ளது:
@@ -834,20 +837,25 @@
                                     </p>
 
 
+                                
+                                    
                                 </div>
                             </div>
 
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                
                                 <img width="1000" height="562" loading="lazy" src="/images/ice_house.jpg" alt="Ice House, Madras" style="padding-top: 5%;">
                                 <hr>
-                                <img width="1000" height="562" loading="lazy" src="/images/lady_willingdon_school.jpg" alt="Lady Willingdon School">
+                                
+                                <img width="1000" height="562" loading="lazy" src="/images/lady_willingdon_school.jpg" alt="Lady Willingdon School" style="">
                                 <hr>
-                                <img width="1000" height="562" loading="lazy" src="/images/founders.jpg"
-                                    alt="Portraits of Lady Willingdon, R.S. Subbalakshmi, and M.V. Singaravelar">
-
+                                
+                                <img width="1000" height="562" loading="lazy" src="/images/founders.jpg" alt="Portraits of Lady Willingdon, R.S. Subbalakshmi, and M.V. Singaravelar" style="">
+                                
+                                
                             </div>
+                            
                             <div class="references">
-
                                 <h2>References</h2>
                                 <ul>
                                     <li>Felton, M. (1950). <i>A child widow’s story: The autobiography of R.S.
@@ -892,8 +900,8 @@
                                             href="https://www.thehindu.com/news/cities/chennai/a-school-caters-to-womens-empowerment/article68217830.ece">
                                             The Hindu Archive</a></li>
                                 </ul>
-
                             </div>
+                            
 
                         </div>
                         <hr />
@@ -970,7 +978,8 @@
             </div>
         </div>
     </section>
-    
+
+
 
     <footer class="wrapper footer-wrapper">
         <div class="footer-top-wrapper">
@@ -1036,7 +1045,6 @@
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
    data-cf-beacon='{"token": "32da7b7ddf434c088e80ccdad5ab3c80"}'></script><!-- End Cloudflare Web Analytics -->
 
-<script src="/js/modals.min.js" defer></script>
 
 </body>
 
