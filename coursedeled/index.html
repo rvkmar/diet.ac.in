@@ -23,25 +23,24 @@
     <link rel="shortcut icon" href="/images/favicon/dietLogoCleaned.png" type="image/png">
 
     <!-- Load Tamil font CSS first -->
-    <link rel="stylesheet" href="/css/early-font.css">
+    <link rel="stylesheet" href="/css/early-font.min.css">
    <link rel="canonical" href="https://dietchennai.org/coursedeled/">
-   <link href="/css/page-loader.css" rel="stylesheet" media="all">
+   <link href="/css/page-loader.min.css" rel="stylesheet" media="all">
 
-    <link href="/css/base.css" rel="stylesheet" media="all">
-    <link href="/css/base-responsive.css" rel="stylesheet" media="all">
-    <link href="/css/grid.css" rel="stylesheet" media="all">
-    <link href="/css/font.css" rel="stylesheet" media="all">
+    <link href="/css/base.min.css" rel="stylesheet" media="all">
+    <link href="/css/base-responsive.min.css" rel="stylesheet" media="all">
+    <link href="/css/grid.min.css" rel="stylesheet" media="all">
+    <link href="/css/font.min.css" rel="stylesheet" media="all">
     <link href="/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="/css/flexslider.css" rel="stylesheet" media="all">
-    <link href="/css/megamenu.css" rel="stylesheet" media="all" />
-    <link href="/css/print.css" rel="stylesheet" media="print" />
-    <link href="/css/megamenu.css" rel="stylesheet" media="all" />
-    <link href="/css/site.css" rel="stylesheet" media="all">
-    <link href="/css/site-responsive.css" rel="stylesheet" media="all">
-    <link href="/css/ma5gallery.css" rel="stylesheet" type="text/css">
-    <link href="/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="/css/flexslider.min.css" rel="stylesheet" media="all">
+    <link href="/css/megamenu.min.css" rel="stylesheet" media="all" />
+    <link href="/css/print.min.css" rel="stylesheet" media="print" />
+    <link href="/css/site.min.css" rel="stylesheet" media="all">
+    <link href="/css/site-responsive.min.css" rel="stylesheet" media="all">
+    <link href="/css/ma5gallery.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/print.min.css" rel="stylesheet" type="text/css" media="print">
     <!-- logo-img css -->
-    <link href="/css/logo.css" rel="stylesheet" media="all">
+    <link href="/css/logo.min.css" rel="stylesheet" media="all">
     <!-- logo-img css -->
     <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -49,119 +48,121 @@
       <script src="/js/respond.min.js" defer></script>
       <![endif]-->
     <noscript>
-        <link href="/css/no-js.css" type="text/css" rel="stylesheet">
+        <link href="/css/no-js.min.css" type="text/css" rel="stylesheet">
     </noscript>
-    <style>
-        /* Centered button container */
-        .img-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            align-items: center;
-        }
 
-        /* Centered button container */
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            align-items: center;
-        }
+<style>
+    /* Centered button container */
+    .img-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+    }
 
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.6);
-        }
+    /* Centered button container */
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+    }
 
-        .modal-content {
-            background-color: #fff;
-            margin: 4% auto;
-            padding: 0;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 80vw;
-            height: 90vh;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
 
-        .close {
-            position: absolute;
-            top: 12px;
-            right: 16px;
-            font-size: 28px;
-            font-weight: bold;
-            color: #ffffff;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 4px 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            z-index: 10000;
-            line-height: 1;
-            border: none;
-            font-family: inherit;
-        }
+    .modal-content {
+        background-color: #fff;
+        margin: 4% auto;
+        padding: 0;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 80vw;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
 
-        .close:hover {
-            background-color: rgba(255, 0, 0, 0.8);
-            transform: scale(1.1);
-        }
+    .close {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 4px 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        z-index: 10000;
+        line-height: 1;
+        border: none;
+        font-family: inherit;
+    }
 
-        .apply-btn {
-            background-color: #0056b3;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-            margin: 10px;
-        }
+    .close:hover {
+        background-color: rgba(255, 0, 0, 0.8);
+        transform: scale(1.1);
+    }
 
-        .apply-btn:hover {
-            background-color: #003d80;
-        }
+    .apply-btn {
+        background-color: #0056b3;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 10px;
+    }
 
-        .button-overlay {
-            position: absolute;
-            top: 53%;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 12px;
-            z-index: 10;
-        }
+    .apply-btn:hover {
+        background-color: #003d80;
+    }
 
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+    .button-overlay {
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 12px;
+        z-index: 10;
+    }
 
-        .confirm-box {
-            background-color: #fff;
-            padding: 20px;
-            max-width: 400px;
-            width: 90%;
-            margin: 20% auto;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            color: #333;
-            /* Make sure text is visible */
-            font-size: 16px;
-            /* Ensure it’s readable */
-        }
-    </style>
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .confirm-box {
+        background-color: #fff;
+        padding: 20px;
+        max-width: 400px;
+        width: 90%;
+        margin: 20% auto;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        color: #333;
+        /* Make sure text is visible */
+        font-size: 16px;
+        /* Ensure it’s readable */
+    }
+</style>
+
 </head>
 
 <body>
@@ -169,7 +170,7 @@
       <img width="200" height="165" src="/images/favicon/dietLogoCleaned.png" alt="" class="page-loader-mark">
       <div class="page-loader-spinner"></div>
    </div>
-   <script src="/js/page-loader.js"></script>
+   <script src="/js/page-loader.min.js"></script>
     <div id="fb-root"></div>
     <header>
         <div class="region region-header-top">
@@ -472,7 +473,7 @@
                                 <ul class="sub-nav-group">
                                     <li><a href="/doc-publications/"><samp
                                                 data-i18n="publications">Publications</samp></a></li>
-                                    <li><a href="/doc-reports/"><samp data-i18n="reports">Reports</samp></a></li>
+                                    <li><a href="/reports/"><samp data-i18n="reports">Reports</samp></a></li>
                                     <li><a href="/doc-forms/"><samp data-i18n="forms">Forms</samp></a></li>
                                     <!-- <li><a href="publications.html">Publications</a></li>
                            <li><a href="reports.html">Reports</a></li>
@@ -495,6 +496,8 @@
             </div>
         </section>
     </header>
+
+
     <!--/.nav-wrapper-->
     <!-- Main and modifiable content starts here -->
     <!-- ---------------------------------------------- -->
@@ -653,6 +656,8 @@
             </div>
         </div>
     </section>
+
+
     <footer class="wrapper footer-wrapper">
         <div class="footer-top-wrapper">
             <div class="container common-container four_content footer-top-container">
@@ -696,76 +701,78 @@
             </div>
         </div>
     </footer>
+
     <!-- <script src="/js/jquery-2.1.1.min.js" defer></script> -->
     <script src="/js/jquery-3.7.1.min.js" defer></script>
     <script src="/js/jquery-migrate-1.4.1.min.js" defer></script>
-    <script src="/js/jquery-accessibleMegaMenu.js" defer></script>
-    <script src="/js/swithcer.js" defer></script>
-    <script src="/js/framework.js" defer></script>
-    <script src="/js/jquery.flexslider.js" defer></script>
-    <script src="/js/font-size.js" defer></script>
-     <script src="/js/ma5gallery.js" defer></script>
-    <script src="/js/megamenu.js" defer></script>
-    <script src="/js/easyResponsiveTabs.js" defer></script>
-    <script src="/js/language.js" defer></script>
-    <script src="/js/custom.js" defer></script>
-   <script src="/js/cms-content.js" defer></script>
-    <script>
-        function openModal(type) {
-            document.getElementById(type + "Modal").style.display = "block";
-        }
+    <script src="/js/jquery-accessibleMegaMenu.min.js" defer></script>
+    <script src="/js/swithcer.min.js" defer></script>
+    <script src="/js/framework.min.js" defer></script>
+    <script src="/js/jquery.flexslider.min.js" defer></script>
+    <script src="/js/font-size.min.js" defer></script>
+     <script src="/js/ma5gallery.min.js" defer></script>
+    <script src="/js/megamenu.min.js" defer></script>
+    <script src="/js/easyResponsiveTabs.min.js" defer></script>
+    <script src="/js/language.min.js" defer></script>
+    <script src="/js/custom.min.js" defer></script>
+   <script src="/js/cms-content.min.js" defer></script>
 
-        function closeModal(type) {
-            document.getElementById(type + "Modal").style.display = "none";
-        }
+<script>
+    function openModal(type) {
+        document.getElementById(type + "Modal").style.display = "block";
+    }
 
-        function showConfirmModal() {
-            document.getElementById("confirmModal").style.display = "block";
-        }
+    function closeModal(type) {
+        document.getElementById(type + "Modal").style.display = "none";
+    }
 
-        function closeConfirmModal() {
-            document.getElementById("confirmModal").style.display = "none";
-        }
+    function showConfirmModal() {
+        document.getElementById("confirmModal").style.display = "block";
+    }
 
-        function forceCloseApply() {
+    function closeConfirmModal() {
+        document.getElementById("confirmModal").style.display = "none";
+    }
+
+    function forceCloseApply() {
+        closeConfirmModal();
+        closeModal('apply');
+    }
+
+    // Only Instructions modal closes on outside click
+    window.onclick = function (event) {
+        const instructionsModal = document.getElementById("instructionsModal");
+        const confirmModal = document.getElementById("confirmModal");
+        if (event.target === instructionsModal) {
+            closeModal("instructions");
+        }
+        if (event.target === confirmModal) {
             closeConfirmModal();
-            closeModal('apply');
         }
+    };
 
-        // Only Instructions modal closes on outside click
-        window.onclick = function (event) {
-            const instructionsModal = document.getElementById("instructionsModal");
+    // Prevent outside click from closing Apply modal
+    function ignoreOutsideClick(event, type) {
+        if (type === 'apply' && event.target.id === "applyModal") {
+            // Do nothing
+        }
+    }
+
+    // Disable Esc key for Apply and Confirm modals
+    window.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            const applyModal = document.getElementById("applyModal");
             const confirmModal = document.getElementById("confirmModal");
-            if (event.target === instructionsModal) {
+            const instructionsModal = document.getElementById("instructionsModal");
+
+            if (confirmModal.style.display === "block" || applyModal.style.display === "block") {
+                event.preventDefault();
+            } else if (instructionsModal.style.display === "block") {
                 closeModal("instructions");
             }
-            if (event.target === confirmModal) {
-                closeConfirmModal();
-            }
-        };
-
-        // Prevent outside click from closing Apply modal
-        function ignoreOutsideClick(event, type) {
-            if (type === 'apply' && event.target.id === "applyModal") {
-                // Do nothing
-            }
         }
-
-        // Disable Esc key for Apply and Confirm modals
-        window.addEventListener("keydown", function (event) {
-            if (event.key === "Escape") {
-                const applyModal = document.getElementById("applyModal");
-                const confirmModal = document.getElementById("confirmModal");
-                const instructionsModal = document.getElementById("instructionsModal");
-
-                if (confirmModal.style.display === "block" || applyModal.style.display === "block") {
-                    event.preventDefault();
-                } else if (instructionsModal.style.display === "block") {
-                    closeModal("instructions");
-                }
-            }
-        });
-    </script>
+    });
+</script>
 
 </body>
 
