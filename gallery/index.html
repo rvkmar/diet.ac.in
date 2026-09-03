@@ -156,14 +156,14 @@
                                             alt="Accessibility Dropdown" />
                                     </a>
                                     <ul style="visibility: hidden;">
-                                        <li> <a onClick="set_font_size(&#39;increase&#39;)" title="Increase font size"
-                                                href="javascript:void(0);">A<sup>+</sup>
+                                        <li> <a data-fontsize="increase" title="Increase font size"
+                                                href="#">A<sup>+</sup>
                                             </a>
                                         </li>
-                                        <li> <a onClick="set_font_size()" title="Reset font size"
-                                                href="javascript:void(0);">A<sup>&nbsp;</sup></a> </li>
-                                        <li> <a onClick="set_font_size(&#39;decrease&#39;)" title="Decrease font size"
-                                                href="javascript:void(0);">A<sup>-</sup></a> </li>
+                                        <li> <a data-fontsize="reset" title="Reset font size"
+                                                href="#">A<sup>&nbsp;</sup></a> </li>
+                                        <li> <a data-fontsize="decrease" title="Decrease font size"
+                                                href="#">A<sup>-</sup></a> </li>
                                         <li> <a href="javascript:void(0);" class="high-contrast dark"
                                                 title="High Contrast">A</a>
                                         </li>
@@ -590,24 +590,7 @@
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
    data-cf-beacon='{"token": "32da7b7ddf434c088e80ccdad5ab3c80"}'></script><!-- End Cloudflare Web Analytics -->
 
-<script>
-        fetch('/assets/content/gallery/gallery.json')
-            .then(response => response.json())
-            .then(images => {
-                const galleryDiv = document.getElementById('gallery');
-                images.forEach(file => {
-                    const img = document.createElement('img');
-                    img.src = file.startsWith('/') ? file : `/assets/content/gallery/${file}`;
-                    img.alt = file;
-                    galleryDiv.appendChild(img);
-                });
-            })
-            .catch(error => {
-                console.error('Failed to load gallery images:', error);
-                const fallback = document.getElementById('gallery');
-                fallback.innerHTML = '<p style="color: red;">Failed to load gallery images.</p>';
-            });
-    </script>
+<script src="/js/gallery-loader.min.js" defer></script>
 
 </body>
 
