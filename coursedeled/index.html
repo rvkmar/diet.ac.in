@@ -399,30 +399,9 @@
     .course-apply-btn {
         background-color: #0056b3; color: white; padding: 12px 24px; border: none;
         border-radius: 6px; cursor: pointer; font-size: 16px; margin: 10px;
+        display: inline-block; text-decoration: none;
     }
-    .course-apply-btn:hover { background-color: #003d80; }
-    .modal {
-        display: none; position: fixed; z-index: 9999; left: 0; top: 0;
-        width: 100%; height: 100%; overflow: hidden; background-color: rgba(0, 0, 0, 0.6);
-    }
-    .modal-content {
-        background-color: #fff; margin: 4% auto; padding: 0; border-radius: 8px;
-        width: 90%; max-width: 80vw; height: 90vh; display: flex; flex-direction: column;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
-    .modal-content iframe { width: 100%; height: 100%; border: none; }
-    .close {
-        position: absolute; top: 12px; right: 16px; font-size: 28px; font-weight: bold;
-        color: #ffffff; background-color: rgba(0, 0, 0, 0.6); padding: 4px 10px;
-        border-radius: 50%; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease;
-        z-index: 10000; line-height: 1; border: none; font-family: inherit;
-    }
-    .close:hover { background-color: rgba(255, 0, 0, 0.8); transform: scale(1.1); }
-    .confirm-box {
-        background-color: #fff; padding: 20px; max-width: 400px; width: 90%; margin: 20% auto;
-        border-radius: 8px; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        color: #333; font-size: 16px;
-    }
+    .course-apply-btn:hover { background-color: #003d80; color: white; }
 </style>
 
     <!--/.nav-wrapper-->
@@ -463,10 +442,10 @@
                         
                         <div class="course-button-overlay">
                             
-                            <button class="course-apply-btn" data-modal-open="instructions">View Instructions</button>
+                            <a class="course-apply-btn" href="https://d1wpyxz35bzzz4.cloudfront.net/2025_2026_D.El.Ed_Admission_Guidelines_for_Government_Institutions.pdf" target="_blank" rel="noopener noreferrer">View Instructions</a>
                             
                             
-                            <button class="course-apply-btn" data-modal-open="apply">Apply Now</button>
+                            <a class="course-apply-btn" href="https://scert.tnschools.gov.in/admission/instructions" target="_blank" rel="noopener noreferrer">Apply Now</a>
                             
                         </div>
                         
@@ -482,7 +461,7 @@
 
                 
                 <p style="text-align: center; margin: 1%; font-style: italic;">
-                    <span class="englishparagraph">For more info, please visit the <a href="https://scert.tnschools.gov.in" style="color: #0056b3; font-weight: 600;">Official SCERT Tamil Nadu website</a></span>
+                    <span class="englishparagraph">For more info, please visit the <a href="https://scert.tnschools.gov.in" target="_blank" rel="noopener noreferrer" style="color: #0056b3; font-weight: 600;">Official SCERT Tamil Nadu website</a></span>
                     
                 </p>
                 
@@ -503,38 +482,6 @@
     <!-- ---------------------------------------------- -->
     <!--/.body-wrapper-->
 
-    
-    <!-- Apply Modal -->
-    <div id="applyModal" class="modal">
-        <button type="button" class="close" data-modal-action="show-confirm" aria-label="Close">&times;</button>
-        <div class="modal-content">
-            <iframe src="https://scert.tnschools.gov.in/admission/instructions" title="Application Page"></iframe>
-        </div>
-    </div>
-
-    <!-- Instructions Modal -->
-    <div id="instructionsModal" class="modal">
-        <button type="button" class="close" data-modal-close="instructions" aria-label="Close">&times;</button>
-        <div class="modal-content">
-            <iframe src="https://d1wpyxz35bzzz4.cloudfront.net/2025_2026_D.El.Ed_Admission_Guidelines_for_Government_Institutions.pdf" title="Admission Guidelines PDF"></iframe>
-        </div>
-    </div>
-
-    <!-- Custom Confirm Modal -->
-    <div id="confirmModal" class="modal">
-        <div class="confirm-box">
-            <p class="englishparagraph" style="font-size: 16px; margin-bottom: 20px;">Are you sure you want to close the application window?</p>
-            
-            <div style="display: flex; justify-content: space-around;">
-                <button style="margin: 5%; padding: 8px 16px; background-color: #28a745; color: white; border: none; border-radius: 4px;"
-                    data-modal-action="force-close-apply">Yes, Close</button>
-                <button style="margin: 5%; padding: 8px 16px; background-color: #dc3545; color: white; border: none; border-radius: 4px;"
-                    data-modal-action="close-confirm">Cancel</button>
-            </div>
-        </div>
-    </div>
-    <script src="/js/modals.min.js" defer></script>
-    
     <section class="wrapper carousel-wrapper">
         <div class="container common-container four_content carousel-container">
             <div id="flexCarousel" class="flexslider carousel">
