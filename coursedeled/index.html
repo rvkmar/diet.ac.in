@@ -51,6 +51,19 @@
         <link href="/css/no-js.min.css" type="text/css" rel="stylesheet">
     </noscript>
 
+<style>
+  .course-img-container { display: flex; justify-content: center; gap: 20px; align-items: center; }
+  .course-button-overlay {
+      position: absolute; top: 53%; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 12px; z-index: 10;
+  }
+  .course-apply-btn {
+      background-color: #0056b3; color: white; padding: 12px 24px; border: none;
+      border-radius: 6px; cursor: pointer; font-size: 16px; margin: 10px;
+      display: inline-block; text-decoration: none;
+  }
+  .course-apply-btn:hover { background-color: #003d80; color: white; }
+</style>
 
 </head>
 
@@ -165,9 +178,11 @@
                                 </li>
                                 <!-- Language dropdown-menu -->
                                 <!-- Language Toggle Switch -->
-                                <span>&nbsp;
-                                    <i class="fa fa-language fa-2x" aria-hidden="true"></i>
-                                </span>
+                                <li>
+                                    <span>&nbsp;
+                                        <i class="fa fa-language fa-2x" aria-hidden="true"></i>
+                                    </span>
+                                </li>
                                 <li class="list-inline-item">
                                     <div class="language-switch">
                                         <label class="switch">
@@ -389,21 +404,6 @@
 
 
 
-
-<style>
-    .course-img-container { display: flex; justify-content: center; gap: 20px; align-items: center; }
-    .course-button-overlay {
-        position: absolute; top: 53%; left: 50%; transform: translateX(-50%);
-        display: flex; gap: 12px; z-index: 10;
-    }
-    .course-apply-btn {
-        background-color: #0056b3; color: white; padding: 12px 24px; border: none;
-        border-radius: 6px; cursor: pointer; font-size: 16px; margin: 10px;
-        display: inline-block; text-decoration: none;
-    }
-    .course-apply-btn:hover { background-color: #003d80; color: white; }
-</style>
-
     <!--/.nav-wrapper-->
     <!-- Main and modifiable content starts here -->
     <!-- ---------------------------------------------- -->
@@ -574,17 +574,18 @@
             </div>
         </div>
         <div class="footer-bottom-wrapper">
+            <div class="w3c-badges">
+                <a href="https://validator.w3.org/nu/?doc=https://dietchennai.org/coursedeled/"
+                    target="_blank" rel="noopener noreferrer" title="Check this page's HTML5 validity (opens validator.w3.org in a new tab)">
+                    <img src="/images/badges/valid-html5.svg" alt="Valid HTML5" width="110" height="34" loading="lazy"></a>
+                <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://dietchennai.org/coursedeled/"
+                    target="_blank" rel="noopener noreferrer" title="Check this page's CSS validity (opens jigsaw.w3.org in a new tab)">
+                    <img src="/images/badges/valid-css.svg" alt="Valid CSS" width="110" height="34" loading="lazy"></a>
+            </div>
             <div class="container common-container four_content footer-bottom-container">
                 <div class="footer-content clearfix">
                     <div><i class="fa fa-clock-o" aria-hidden="true"></i>
                         <span id="datetime"></span>
-                    </div>
-                    <div class="copyright-content"><samp data-i18n="contentmanager">Website Content Managed by</samp>
-                        <strong data-i18n="diet">District Institute of Education and Training, Chennai</strong>
-                        <span><samp data-i18n="designedby">Designed, Developed by</samp>
-                            <a target="_blank" title="External Link that opens in a new window"
-                                href="https://dietchennai.org/">
-                                <strong data-i18n="designer">Academic faculty of DIET, Chennai</strong></a></span>
                     </div>
                     <div class="last-updated"><samp data-i18n="updation">Last Updated:</samp>
                         <strong data-cms-field="last_updated"> 18-APR-2025</strong>

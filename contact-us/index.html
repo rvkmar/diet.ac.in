@@ -51,6 +51,71 @@
         <link href="/css/no-js.min.css" type="text/css" rel="stylesheet">
     </noscript>
 
+<style>
+    .contact-details,
+    .contact-form {
+        margin-top: 20px;
+    }
+
+    .contact-details p {
+        margin: 10px 0;
+    }
+
+    .map {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .map-link-btn {
+        display: inline-block;
+        background-color: #004080;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        text-decoration: none;
+        margin-top: 10px;
+    }
+
+    .map-link-btn:hover {
+        background-color: #003060;
+        color: white;
+    }
+
+    .contact-form form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .contact-form button {
+        background-color: #004080;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .contact-form button:hover {
+        background-color: #003060;
+    }
+
+    @media screen and (max-width: 600px) {
+        .contact-us-container {
+            padding: 10px;
+        }
+    }
+</style>
 
 </head>
 
@@ -165,9 +230,11 @@
                                 </li>
                                 <!-- Language dropdown-menu -->
                                 <!-- Language Toggle Switch -->
-                                <span>&nbsp;
-                                    <i class="fa fa-language fa-2x" aria-hidden="true"></i>
-                                </span>
+                                <li>
+                                    <span>&nbsp;
+                                        <i class="fa fa-language fa-2x" aria-hidden="true"></i>
+                                    </span>
+                                </li>
                                 <li class="list-inline-item">
                                     <div class="language-switch">
                                         <label class="switch">
@@ -388,71 +455,6 @@
 
 
 
-<style>
-    .contact-details,
-    .contact-form {
-        margin-top: 20px;
-    }
-
-    .contact-details p {
-        margin: 10px 0;
-    }
-
-    .map {
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .map-link-btn {
-        display: inline-block;
-        background-color: #004080;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 4px;
-        font-size: 16px;
-        text-decoration: none;
-        margin-top: 10px;
-    }
-
-    .map-link-btn:hover {
-        background-color: #003060;
-        color: white;
-    }
-
-    .contact-form form {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        padding: 10px;
-        margin: 8px 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-    }
-
-    .contact-form button {
-        background-color: #004080;
-        color: white;
-        padding: 10px;
-        border: none;
-        border-radius: 4px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    .contact-form button:hover {
-        background-color: #003060;
-    }
-
-    @media screen and (max-width: 600px) {
-        .contact-us-container {
-            padding: 10px;
-        }
-    }
-</style>
     <!--/.nav-wrapper-->
     <!-- Main and modifiable content starts here -->
     <!-- ---------------------------------------------- -->
@@ -602,17 +604,18 @@
             </div>
         </div>
         <div class="footer-bottom-wrapper">
+            <div class="w3c-badges">
+                <a href="https://validator.w3.org/nu/?doc=https://dietchennai.org/contact-us/"
+                    target="_blank" rel="noopener noreferrer" title="Check this page's HTML5 validity (opens validator.w3.org in a new tab)">
+                    <img src="/images/badges/valid-html5.svg" alt="Valid HTML5" width="110" height="34" loading="lazy"></a>
+                <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://dietchennai.org/contact-us/"
+                    target="_blank" rel="noopener noreferrer" title="Check this page's CSS validity (opens jigsaw.w3.org in a new tab)">
+                    <img src="/images/badges/valid-css.svg" alt="Valid CSS" width="110" height="34" loading="lazy"></a>
+            </div>
             <div class="container common-container four_content footer-bottom-container">
                 <div class="footer-content clearfix">
                     <div><i class="fa fa-clock-o" aria-hidden="true"></i>
                         <span id="datetime"></span>
-                    </div>
-                    <div class="copyright-content"><samp data-i18n="contentmanager">Website Content Managed by</samp>
-                        <strong data-i18n="diet">District Institute of Education and Training, Chennai</strong>
-                        <span><samp data-i18n="designedby">Designed, Developed by</samp>
-                            <a target="_blank" title="External Link that opens in a new window"
-                                href="https://dietchennai.org/">
-                                <strong data-i18n="designer">Academic faculty of DIET, Chennai</strong></a></span>
                     </div>
                     <div class="last-updated"><samp data-i18n="updation">Last Updated:</samp>
                         <strong data-cms-field="last_updated"> 18-APR-2025</strong>
